@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "Live Soccer Scores",
+    "version": "1.0",
+    "description": "Get real-time soccer scores!",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["https://live-score-api.com/*"],
+    "icons": {
+        "48": "icons/icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon.png",
+            "48": "icons/icon.png",
+            "128": "icons/icon.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://live-score-api.com/*"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "content_security_policy": {
+    "script-src": "'self' 'nonce-PLACEHOLDER_NONCE'",
+    "object-src": "'self'"
+ },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "soccertrial-extension",
+            "strict_min_version": "91.0"
+        }
+    }
+
+}

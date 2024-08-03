@@ -1,0 +1,9 @@
+1. **Download the extension files**: If you have a ZIP file, extract it to a folder.
+2. **Open Chrome and go to the Extensions page**: Type `chrome://extensions` in the address bar and press Enter.
+3. **Enable Developer Mode**: Toggle the switch at the top right corner of the Extensions page.
+4. **Load the unpacked extension**: Click the "Load unpacked" button and select the folder where you extracted the extension files.
+
+Your extension should now be installed and visible in Chrome browser pin it to bar.
+
+
+security---for random nonce- node build.js---
